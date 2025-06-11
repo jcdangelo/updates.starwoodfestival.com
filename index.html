@@ -1,45 +1,94 @@
 <html>
 <head>
 <title>Starwood Updates Demo</title>
+<script>
+<!--
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+
+-->
+</script>
+<style>
+img {
+  background: #F1F1FA;
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin: 10px auto;
+  border: 0;
+}
+</style>
 </head>
 <body>
 <h1>
 Starwood Onsite Schedule Updates Demo
 </h1>
 
-<p>Consult this page to learn of any changes to the <a href="https://www.starwoodfestival.com/starwood">Starwood 2025</a> schedule since it was printed in the <a href="">Tour Guide</a>.  Changes will be posted here, at the gate, and at the ACE information booth across from Caffeina's Cafe.</p>
+<p>Consult this page to learn of any changes to the <a href="https://www.starwoodfestival.com/starwood">Starwood 2025</a> schedule since it was printed in the <a href="">Tour Guide</a>.  Changes will be posted here, at the gate, and at the ACE information booth across from Caffeina's Cafe.  You may or may not be aware of this being a demo.</p>
 
-<h2>Tue - July 15</h2>
+<p>Last update: Wed Jun 11 01:05am EDT</p>
+
+<h4>Tue - July 15</h4>
 <ul>
 <li>7pm - Stone Circle - There will be a change, but not in schedule, but in consiousness.  Be warned, if you attend the opening rite, you may not see the same people you expected.  You may not be the same person you were.</li>
 </ul>
 
-<h2>Wed - July 16</h2>
+<h4>Wed - July 16</h4>
 <ul>
 <li>11:30am - Village Green - Ned's Silly String Fight will need to use pillows instead of Silly String due to Silly String Supply Shortages. Sorry, Sally.</li>
 </ul>
 
-<h2>Thu - July 17</h2>
+<h4>Thu - July 17</h4>
 <ul>
 <li>2:30pm - Spirit Circle - The Spirit Guide Stoners circle was moved to the Stone Circle.</li>
 <li>2:30pm - Stone Circle - The Stone Age Spirit Conscious could not be contained so the spirit was moved to the Spirit Circle.</li>
 <li>Midnight - Fairy Shrine - Sasquatch Summit has been cancelled due to lack of concrete evidence that the Bigfoots will show.  Instead, a local group of cryptozoologists will host an investigation.</li>
 </ul>
 
-<h2>Fri - July 18</h2>
+<h4>Fri - July 18</h4>
 <ul>
 <li>[ No changes reported currently ]</li>
 </ul>
 
-<h2>Sat - July 19</h2>
+<h4>Sat - July 19</h4>
 <ul>
 <li>4pm - Main Stage - The Subgenius Rant has been sadly CANCELED, because the UFOs actually came to X-Day this year.</li>
 </ul>
 
-<h2>Sat - July 19</h2>
+<h4>Sun - July 20</h4>
 <ul>
 <li>[ No changes reported currently ]</li>
 </ul>
+
+<img class="lazy" data-src="https://static.wixstatic.com/media/9af7a4_de456dc350d64b4caa47acab9e6d5548%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9af7a4_de456dc350d64b4caa47acab9e6d5548%7Emv2.jpg">
 
 </body>
 </html>
