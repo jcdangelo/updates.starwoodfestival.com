@@ -3,63 +3,6 @@
 <head>
 <title>Starwood Schedule Updates</title>
 <link rel="icon" type="image/x-icon" href="tinyrosencomet.jpg">
-<script>
-<!--
-
-// from https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;    
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-
--->
-</script>
 <style>
 h1, h2, h3, h4, p, li {
   font-family: sans-serif;
@@ -144,14 +87,6 @@ Starwood Festival Onsite Schedule Updates
 </ul>
 
 <p>Consult this page to learn of any changes to the <a href="https://www.starwoodfestival.com/starwood">Starwood 2025</a> <a href="https://www.starwoodfestival.com/starwood-festival-schedule">schedule</a> since it was printed in the <a href="https://starwoodfestival.com/so/c1PVaTy9s/c?w=ohodUDmyt6FZpRI4ucz9lUgO5OYNuF6hG7P9vjgkJ-g.eyJ1IjoiaHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xc21fLXIySHloZmhlckQtdkxJZzZXeEtZRzV5dUlVc0Evdmlldz91c3A9c2hhcmluZyIsInIiOiI4ODJkNTJlMy04NDAxLTQxOTktODI4Ni0zODgzMzRhYWZkMWUiLCJtIjoibWFpbCIsImMiOiIyMzBmNmE5OS0xYWI1LTRhMmEtYTk5Ni02ZDgwOTAwYzZlNTQifQ">Tour Guide (pdf, 5.7 MB)</a>.  Changes will be posted here, at the gate, and at the Starwood Information booth across from Caffeina's Cafe.</p>
-
-<p style="text-align: center">
-updates.starwoodfestival.com
-<br>
-<img class="lazy" data-src="qr_updates.png" style="width:120px;height:120px;" alt="QR code for this website">
-<img class="lazy" data-src="https://static.wixstatic.com/media/9af7a4_de456dc350d64b4caa47acab9e6d5548%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9af7a4_de456dc350d64b4caa47acab9e6d5548%7Emv2.jpg" style="width:100px;height:90px;" alt="Rosencomet Project Image">
-</p>
-
 
 </body>
 </html>
